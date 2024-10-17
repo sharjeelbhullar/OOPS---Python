@@ -11,3 +11,5 @@ class Car():
 
 car1 = Car()
 car1.start()
+
+#Abstraction is hiding details from the user which is running at the backend.

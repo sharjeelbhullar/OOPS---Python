@@ -16,3 +16,5 @@ class Account:
 user1 = Account(98000, 432)
 user1.credit(3000)
 user1.debit(2000)
+
+#Encapsulation is using the attributes, and methods  by using the objects or creating objects.
