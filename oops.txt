@@ -1,0 +1,155 @@
+OOP in Python:
+To map with real world scenarios, we started using objects in code.
+This is called object oriented programming.
+
+In start we are doing procedural programming(sequence).
+
+Due to functions, redundancy of code decreases while reusability increases.
+In this we move towards functional programming.
+
+Now we ahead towards object orientied programming.
+We will use this concept if we think we have to use this thing.
+But it's important concepts to learn.
+
+Object: Anything is an object like mouse, keyboard, table etc.
+Before making object we make a class. For instance, in class we assume students that are objects.
+In python lists are objects, strings are also objects.
+
+Class & Object in Python:
+Class is a blueprint for creating objects.
+
+#creating class
+class Student:
+	name = "sharjeel"
+
+#creating object (instance)
+s1 = Student()
+print(s1.name)
+
+We cannot use class directly, we can use objects for example we cannot use class directly we use students to represents a class. For instance, we make a blueprint of a car after that we made car according to that blueprint.
+
+
+Constructor(init function):
+All classes have a function called __init__(), which is always executed when the object is being initiated.
+It invokes at the time of object creation.
+It will invokes by default if you have not created any init function. It will be executeda always, doesn't matter you have created it or not.
+
+#creating init function (constructor)
+class Student:
+	def __init__(self):
+		print("adding new student in Database...")
+
+s1 = Student("karan")
+
+self has the same meaning of that object.
+In constructor we have always pass an argument which is self.
+The self paramter is a reference to the current instance of the class, and is used to access the variables that belongs to the class...
+
+Attribute:
+The data that is stored inside the class or objects is called attributes.
+
+The one constructor in which we have only one paramter which is self, such type of constructor is called default parameter.
+
+Other type is called parameterized constructor.
+Generally in a single class we make a single constructor according to our need.
+
+Class & Instance Attributes:
+
+Class.attr(Class attribute)
+obj.attr(Instance attribute)
+
+Percedence/Preferrence
+object attribute > class attribute
+
+Methods:
+Methods are functions that belong to objects.
+In class methods we always use self parameter in a method.
+
+@static methods
+Methods that don't use the self parameter (work at class level)
+
+class Student():
+	@static method
+	def college():
+		print("ABC College")
+
+Decorators allow us to wrap another function in order to extend the behaviour of the wrapped function, without permanently modifying it.
+
+
+Abstraction:
+Hiding the implementation details of a class and only showing the essential features to the user.
+
+Encapsulation:
+Wrapping data and functions into a single unit(object).
+
+del keyword:
+used to delete object properties or object itself.
+
+#delete properties/attributes
+del s1.name
+
+#delete object
+del s1
+
+Private attributes & methods:
+Private attributes & methods are meant to be used only within the class and are not accessible from outside the class.
+
+def __(privte_function):
+	Or
+self.__account_no
+
+Basically these __ double underscore symbol make a variable, attribute, or function private.
+
+Inheritance:
+When one class(child/derived) derives the properties & methods of another class(parent/base).
+
+If you are not using any object of a particular class for that method you can define that method as a static method.
+
+Types of Inheritance:
+Single Inheritance	(base class > child class)
+Multi-level Inhertiance	(base class > child class > subchild class)
+Multiple Inheritance	(base class 1, base class 2, or more > child class)
+
+
+Super method:
+super() method is used to access method of the parent class.
+If you haven't given any attribute to your child class and want to access the attribute of the parent class without creating the attribute within current child class, for that we use this super method.
+
+super().{method-name}
+
+Class method:
+A class method is bound to the class & receives the class as an implicit first argument.
+
+Note - static method can't access or modify class state & generally for utility.
+
+If you want to change the value of class attribute then there are multiple ways for doing it.
+
+Class-name.attribute = ""
+	Or
+self.__class__.attribute = ""
+	Or
+
+If you want to change the class attribute within our function for that make the type of your function/method to class method.
+
+For instance:
+class Person:
+name = "anonymous"
+
+@class method
+def changeName(cls, name):
+	cls.name = name
+
+p1 = Person()
+p1.changeName("rahul kumar")
+print(p1.name)
+print(Person.name)
+
+Three types of methods are:
+1) Static methods
+2) Class methods (cls)
+3) Instance methods (self)
+
+Property:
+We use @property decorator on any method in the class to use the method as a property.
+	
+
